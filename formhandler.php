@@ -40,7 +40,7 @@ foreach ($_POST as $key => $value) {
 $from='From: '. $email . "(" . $name . ")" . "\r\n"; 
 	
 //for final testing, comment out the above line and uncomment the one below, replacing yourname@domain.com with your own email address: 		
-$from='From: '. $email . "(" . $name . ")" . "\r\n" . 'Bcc: cclark09@seattlecentral.edu' . "\r\n";
+$from='From: '. $email . "(" . $name . ")" . "\r\n" . 'Bcc: client_email_address' . "\r\n";
 // sends bcc to alternate address 
 
 //Creates intelligible subject line that shows where it came from
@@ -52,6 +52,6 @@ $subject = 'Email from your Late Homework Notification page'; // if your client 
 
 //Sends email, with elements created above
 //Replace clientname@domain.com with your client's email address. Put your address here for initial testing, put your client's address for final testing and use.
-mail ('cclark09@seattlecentral.edu', $subject, $body, $from);
+mail ('client_email_address', $subject, $body, $from);
 
 header('Location: thx.php'); // replace "thx.html" with the name and path to your actual thank you page
